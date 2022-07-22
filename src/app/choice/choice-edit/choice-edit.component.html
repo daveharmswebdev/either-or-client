@@ -1,0 +1,11 @@
+<form [formGroup]="choiceForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Description</mat-label>
+    <input matInput formControlName="description" />
+  </mat-form-field>
+  <button mat-raised-button (click)="submitChoice()">Submit</button>
+</form>
