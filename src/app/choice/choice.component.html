@@ -1,6 +1,8 @@
 <app-choice-item
   *ngFor="let choice of choices$ | async"
   [choice]="choice"
+  (delete)="handleDelete($event)"
+  (edit)="handleEdit($event)"
 ></app-choice-item>
 
 <button mat-raised-button (click)="displayNewButtonForm()">New Choice</button>

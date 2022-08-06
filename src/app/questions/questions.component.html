@@ -1,0 +1,21 @@
+<p>questions works!</p>
+
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="24px">
+  <mat-card *ngFor="let question of questions$ | async">
+    <div>
+      <div fxLayout="row" fxLayoutAlign="space-between start">
+        <mat-card-title>{{ question.title }}</mat-card-title>
+        <div fxLayout="row" fxLayoutAlign="end start" fxLayoutGap="16px">
+          <button mat-raised-button color="primary">Edit</button>
+          <button mat-raised-button color="warn">Delete</button>
+        </div>
+      </div>
+      <mat-card-subtitle>{{ question.questionText }}</mat-card-subtitle>
+    </div>
+    <mat-card-content>
+      <p *ngFor="let choice of question.choices">
+        {{ choice.name }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

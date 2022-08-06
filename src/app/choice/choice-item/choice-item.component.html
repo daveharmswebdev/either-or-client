@@ -1,6 +1,8 @@
 <mat-card>
-  <mat-card-header>
+  <mat-card-header fxLayout="row" fxLayoutAlign="space-between start">
     <mat-card-title>{{ choice.name }}</mat-card-title>
+    <button mat-raised-button color="accent" (click)="emitEdit()">Edit</button>
+    <button mat-raised-button color="warn" (click)="emitDelete()">Delete</button>
   </mat-card-header>
   <mat-card-content>
     <p>{{ choice.description }}</p>
